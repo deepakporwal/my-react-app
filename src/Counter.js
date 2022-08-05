@@ -6,6 +6,7 @@ import {
   incrementByAmount,
   incrementAsync,
   selectCount,
+  resetState,
 } from './counterSlice';
 
 
@@ -32,6 +33,8 @@ export function Counter() {
         >
           -
         </button>
+        <br></br>
+        <button onClick={()=>dispatch(resetState(1))}>Reset State</button>
       </div>
       <div >
         <input

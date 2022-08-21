@@ -2,6 +2,8 @@ import './App.css';
 import Header from './Components/Header';
 import {Footer}  from './Components/Footer';
 import {Todos}  from './Components/Todos';
+import { Sidebar} from './Components/Sidebar'
+import { Counter } from './Counter';
 
 function App() {
   
@@ -26,6 +28,8 @@ function App() {
      <div className="App">
         <Header  />    
         <Todos todos={todosData}  />
+        <Sidebar/>
+        <Counter />
         <Footer/>
      </div>
   );

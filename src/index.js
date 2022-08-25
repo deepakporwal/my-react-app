@@ -10,15 +10,23 @@ import {
 } from "react-router-dom";
 import Home from '../src/components/Home';
 import About from '../src/components/About';
+import Sample from '../src/components/Sample';
+import ExpenseItem from './components/ExpenseItem.';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const menu = ['tea','coffe','milk'];
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<ExpenseItem menu = {menu} />} />
         <Route path="/About" element={<About />} />
         <Route path="/Home" element={<Home />} />
+        <Route path="/Sample" element={<Sample />} />
+        <Route path="/App" element={<App />} />
+        <Route path="/ExpenseItem" element={<ExpenseItem menu = {menu} />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -3,11 +3,32 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from '../src/components/Home';
+import About from '../src/components/About';
+import Sample from '../src/components/Sample';
+import ExpenseItem from './components/ExpenseItem.';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const menu = ['tea','coffe','milk'];
+
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ExpenseItem menu = {menu} />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Sample" element={<Sample />} />
+        <Route path="/App" element={<App />} />
+        <Route path="/ExpenseItem" element={<ExpenseItem menu = {menu} />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

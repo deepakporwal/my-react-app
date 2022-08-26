@@ -11,7 +11,7 @@ import {
 import Home from '../src/components/Home';
 import About from '../src/components/About';
 import Sample from '../src/components/Sample';
-import ExpenseItem from './components/ExpenseItem.';
+// import ExpenseItem from './components/ExpenseItem.';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

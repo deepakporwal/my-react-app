@@ -15,18 +15,15 @@ import ExpenseItem from './components/ExpenseItem.';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const menu = ['tea','coffe','milk'];
-
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ExpenseItem menu = {menu} />} />
+        <Route path="/" element={<App />} />
         <Route path="/About" element={<About />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Sample" element={<Sample />} />
-        <Route path="/App" element={<App />} />
-        <Route path="/ExpenseItem" element={<ExpenseItem menu = {menu} />} />
+        {/* <Route path="/ExpenseItem" element={<ExpenseItem />} /> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

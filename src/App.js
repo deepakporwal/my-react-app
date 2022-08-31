@@ -1,6 +1,7 @@
 import './App.css';
 import { Link, Outlet } from "react-router-dom";
-import Expenses from './components/Expenses';
+import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
   const expenses = [
@@ -42,6 +43,7 @@ function App() {
         <Outlet />
       </nav>
       <br />
+      <NewExpense />
       <Expenses items={expenses} />
 |   </div>
   );
